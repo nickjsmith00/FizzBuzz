@@ -14,6 +14,11 @@
 		018C9ECB1EB0BA9700F9CFD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018C9EC91EB0BA9700F9CFD7 /* LaunchScreen.storyboard */; };
 		018C9ED61EB0BA9700F9CFD7 /* FizzBuzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018C9ED51EB0BA9700F9CFD7 /* FizzBuzzTests.swift */; };
 		018C9EE11EB0BA9700F9CFD7 /* FizzBuzzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018C9EE01EB0BA9700F9CFD7 /* FizzBuzzUITests.swift */; };
+		3CE536EB1EB15B06009263F2 /* homePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE536EA1EB15B06009263F2 /* homePageViewController.swift */; };
+		3CE536ED1EB15B51009263F2 /* gameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE536EC1EB15B51009263F2 /* gameSettingsViewController.swift */; };
+		3CE536EF1EB15B74009263F2 /* gameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE536EE1EB15B74009263F2 /* gameViewController.swift */; };
+		3CE536F11EB15B97009263F2 /* howToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE536F01EB15B97009263F2 /* howToPlayViewController.swift */; };
+		3CE536F31EB15BAF009263F2 /* hiScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE536F21EB15BAF009263F2 /* hiScoresViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		018C9EDC1EB0BA9700F9CFD7 /* FizzBuzzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FizzBuzzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		018C9EE01EB0BA9700F9CFD7 /* FizzBuzzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzUITests.swift; sourceTree = "<group>"; };
 		018C9EE21EB0BA9700F9CFD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CE536EA1EB15B06009263F2 /* homePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homePageViewController.swift; sourceTree = "<group>"; };
+		3CE536EC1EB15B51009263F2 /* gameSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameSettingsViewController.swift; sourceTree = "<group>"; };
+		3CE536EE1EB15B74009263F2 /* gameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameViewController.swift; sourceTree = "<group>"; };
+		3CE536F01EB15B97009263F2 /* howToPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = howToPlayViewController.swift; sourceTree = "<group>"; };
+		3CE536F21EB15BAF009263F2 /* hiScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hiScoresViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,11 @@
 				018C9EC01EB0BA9700F9CFD7 /* AppDelegate.swift */,
 				018C9EC21EB0BA9700F9CFD7 /* ViewController.swift */,
 				018C9EC41EB0BA9700F9CFD7 /* Main.storyboard */,
+				3CE536F21EB15BAF009263F2 /* hiScoresViewController.swift */,
+				3CE536F01EB15B97009263F2 /* howToPlayViewController.swift */,
+				3CE536EE1EB15B74009263F2 /* gameViewController.swift */,
+				3CE536EC1EB15B51009263F2 /* gameSettingsViewController.swift */,
+				3CE536EA1EB15B06009263F2 /* homePageViewController.swift */,
 				018C9EC71EB0BA9700F9CFD7 /* Assets.xcassets */,
 				018C9EC91EB0BA9700F9CFD7 /* LaunchScreen.storyboard */,
 				018C9ECC1EB0BA9700F9CFD7 /* Info.plist */,
@@ -259,7 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CE536F31EB15BAF009263F2 /* hiScoresViewController.swift in Sources */,
+				3CE536EB1EB15B06009263F2 /* homePageViewController.swift in Sources */,
 				018C9EC31EB0BA9700F9CFD7 /* ViewController.swift in Sources */,
+				3CE536ED1EB15B51009263F2 /* gameSettingsViewController.swift in Sources */,
+				3CE536EF1EB15B74009263F2 /* gameViewController.swift in Sources */,
+				3CE536F11EB15B97009263F2 /* howToPlayViewController.swift in Sources */,
 				018C9EC11EB0BA9700F9CFD7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +525,7 @@
 				018C9EE71EB0BA9700F9CFD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		018C9EE81EB0BA9700F9CFD7 /* Build configuration list for PBXNativeTarget "FizzBuzzTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +534,7 @@
 				018C9EEA1EB0BA9700F9CFD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		018C9EEB1EB0BA9700F9CFD7 /* Build configuration list for PBXNativeTarget "FizzBuzzUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +543,7 @@
 				018C9EED1EB0BA9700F9CFD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
