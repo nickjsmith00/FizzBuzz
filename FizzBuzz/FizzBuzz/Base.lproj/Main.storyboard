@@ -280,6 +280,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="FizzBuzzButton:" destination="1aD-Gw-wgE" eventType="touchUpInside" id="gfX-L7-6Wc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYE-R1-uEZ">
                                 <rect key="frame" x="30" y="485" width="155" height="90"/>
@@ -291,6 +294,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="FizzButton:" destination="1aD-Gw-wgE" eventType="touchUpInside" id="N7j-Ra-GBx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzp-li-gQ9">
                                 <rect key="frame" x="190" y="485" width="155" height="90"/>
@@ -302,6 +308,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="BuzzButton:" destination="1aD-Gw-wgE" eventType="touchUpInside" id="J9Z-Ff-Tmb"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueCircle" translatesAutoresizingMaskIntoConstraints="NO" id="bsk-WW-oYQ">
                                 <rect key="frame" x="24" y="213" width="60" height="60"/>
@@ -358,6 +367,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="BuzzTextField" destination="k48-7S-qdt" id="OnS-PF-kne"/>
+                        <outlet property="FizzTextField" destination="kan-Gy-B3M" id="RzD-ct-MWz"/>
+                        <outlet property="ScoreTextField" destination="zFX-y1-d5T" id="hki-UO-WQC"/>
+                        <outlet property="counterTextField" destination="ohp-zZ-Wxn" id="h12-oh-k0U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5n-PE-03k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -378,6 +393,6 @@
         <image name="stopButton" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NRf-Tb-NMY"/>
+        <segue reference="lV3-g4-php"/>
     </inferredMetricsTieBreakers>
 </document>
