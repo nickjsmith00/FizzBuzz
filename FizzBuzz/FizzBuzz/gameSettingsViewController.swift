@@ -54,7 +54,7 @@ class gameSettingsViewController: UIViewController, UIPickerViewDelegate, UIPick
     internal func settingsEvent() {
         if (Global.fizzNumber == Global.buzzNumber) {
             StartGameBtn.isEnabled = false
-            ErrorStartGame.text = "Cannot have same fizz and buzz number!"
+            ErrorStartGame.text = "Fizz and Buzz number cannot be the same!"
         } else {
             StartGameBtn.isEnabled = true
             ErrorStartGame.text = ""
