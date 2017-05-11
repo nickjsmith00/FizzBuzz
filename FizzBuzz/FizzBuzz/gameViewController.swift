@@ -11,9 +11,11 @@ class gameViewController: UIViewController {
     //logic
     private var counter:Int = 1 //can start at 1 or the first divisible number of fizz/buzz
     private var buttonPressed:Bool = false
+    private var lifes:[UIImageView] = []
+    private var amountOfLifes = 3
+    private var currentlyGotScore:Bool = false
     //timer
-    private var updateTimer:Timer?
-    private var timerSpeed:Double = 1
+    private var updateTimer:Timer!
     //textfields
     @IBOutlet weak var counterTextField: UILabel!
     @IBOutlet weak var FizzTextField: UILabel!
@@ -23,6 +25,8 @@ class gameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        counterTextField.adjustsFontSizeToFitWidth = true
+        addLifesToScreen()
         Global.currentScore = 0
         counterTextField.text = "\(counter)"
         FizzTextField.text = "\(Global.fizzNumber)"
@@ -42,7 +46,7 @@ class gameViewController: UIViewController {
     private func startTimer() {
         if updateTimer == nil {
             updateTimer = Timer.scheduledTimer(
-                timeInterval: timerSpeed, target: self, selector: #selector(updateGame), userInfo: nil, repeats: true
+                timeInterval: Global.timerSpeed, target: self, selector: #selector(updateGame), userInfo: nil, repeats: true
             )
         }
     }
@@ -64,8 +68,14 @@ class gameViewController: UIViewController {
     private func handleButtons(type: String) {
         buttonPressed = true
         if (fizzBuzzLogic() == type) {
-            if (type == "fizz" || type == "buzz") { Global.currentScore += 1 }
-            if (type == "fizzbuzz") { Global.currentScore += 2 }
+            if (!currentlyGotScore && (type == "fizz" || type == "buzz")) {
+                Global.currentScore += 10
+                currentlyGotScore = true
+            }
+            if (!currentlyGotScore && type == "fizzbuzz") {
+                Global.currentScore += 25
+                currentlyGotScore = true
+            }
             uiTracking()
         } else {
             uiTracking()
@@ -97,15 +107,34 @@ class gameViewController: UIViewController {
             failGame() //fail if you press nothing when a button was required
         }
         //otherwise succeed if you didn't need to press anything or already pressed a successful button
-        counter += 1
+        if (!Global.insaneCounter) {counter += 1 }
+        else { counter += 1 + Int(arc4random_uniform(10)) }
+        currentlyGotScore = false
         counterTextField.text = "\(counter)"
     }
     private func failGame() {
-        self.dismiss(animated: true, completion: nil) //takes you to previous page
+        lifes[amountOfLifes-1].removeFromSuperview()
+        addEmptyLife(amountOfLifes-1)
+        amountOfLifes -= 1
+        if (amountOfLifes <= 0) { self.dismiss(animated: true, completion: nil) } //takes you to previous page
         //extension: send you to highscores page
     }
-    private func uiTracking() {
+    private func uiTracking() -> Void {
         ScoreTextField.text = "Score: \(Global.currentScore)"
-        //add lives checking here too
+    }
+    private func addEmptyLife(_ position:Int) -> Void {
+        let currentPosition = CGRect(x: 20 + 30 * position, y: 21, width: 34, height: 34)
+        lifes[position] = UIImageView(frame: currentPosition)
+        lifes[position].image = UIImage(named: "emptyLife")
+        self.view.addSubview(lifes[position])
+    }
+    private func addLifesToScreen() -> Void {
+        for i in 0...(amountOfLifes-1) {
+            let currentPosition = CGRect(x: 24 + 30 * i, y:26, width:25, height:25)
+            let life = UIImageView(frame: currentPosition)
+            life.image = UIImage(named: "fullLife")
+            self.view.addSubview(life)
+            lifes.append(life)
+        }
     }
 }

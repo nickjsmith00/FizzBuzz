@@ -13,5 +13,8 @@ class Global: NSObject {
     public static var fizzNumber = 3 //default values
     public static var buzzNumber = 5 //default values
     public static var currentScore = 0 //default value
+    public static var timerSpeed = 0.0 //based on difficulty
+    public static var insaneCounter = false
+    public static var difficulty = "easy"
     //other
 }
