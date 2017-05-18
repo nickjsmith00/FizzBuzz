@@ -37,6 +37,8 @@ class Global: NSObject {
             }
         }
     }
+    //when score reaches certain level above old highscores,
+    //shiftHighScores fixes and updates the order
     private static func shiftHighScores(_ position:Int) -> Void {
         if (position == 1-1) {
             highScores[5-1] = highScores[5-2]
