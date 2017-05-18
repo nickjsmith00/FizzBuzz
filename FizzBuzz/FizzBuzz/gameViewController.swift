@@ -122,14 +122,23 @@ class gameViewController: UIViewController {
         amountOfLifes -= 1
         if (amountOfLifes <= 0) {
             stopTimer() //ends timer so timer is not continuing in another viewController
-            /*
-             On Main.storyboard:
-             Clicked on hiScoresViewController and went just below Custom Class, to Identity.
-             In Identity, added Storyboard ID as HighScores and ticked “Use Storyboard ID”
-             This enables to be able to go to that viewController through the code.
-            */
-            let changeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HighScores") as! hiScoresViewController
-            self.present(changeViewController, animated: true, completion: nil) //change to hiScoresViewController
+            let gameOverAlert = UIAlertController(title: "Lost All Lives", message: "Game Over!", preferredStyle: .alert)
+            let playAgainAction = UIAlertAction(title: "Play Again", style: .default) {
+                (action) -> Void in print("") //print("playing same game type")
+                self.changeViewController("Game Settings")
+            }
+            let highScoreAction = UIAlertAction(title: "Hi Scores", style: .default) {
+                (action) -> Void in print("") //print("going to highscore page")
+                self.changeViewController("Hi Scores")
+            }
+            let mainMenuAction = UIAlertAction(title: "Main Menu", style: .default) {
+                (action) -> Void in print("") //print("going to main menu")
+                self.changeViewController("Main Menu")
+            }
+            gameOverAlert.addAction(playAgainAction)
+            gameOverAlert.addAction(highScoreAction)
+            gameOverAlert.addAction(mainMenuAction)
+            self.present(gameOverAlert, animated: true, completion: nil)
         }
     }
     //adding Empty or FullLife UI element/s to screen
@@ -146,6 +155,27 @@ class gameViewController: UIViewController {
             life.image = UIImage(named: "fullLife")
             self.view.addSubview(life)
             lifes.append(life)
+        }
+    }
+    private func changeViewController(_ nameOf:String) -> Void {
+        /*
+         On Main.storyboard:
+         Clicked on hiScoresViewController and went just below Custom Class, to Identity.
+         In Identity, added Storyboard ID as HighScores and ticked “Use Storyboard ID”
+         This enables to be able to go to that viewController through the code.
+         */
+        if (nameOf == "Game Settings") {
+            let viewControllerName = self.storyboard?.instantiateViewController(withIdentifier: "GameSettings") as! gameSettingsViewController
+            self.present(viewControllerName, animated: true, completion: nil) //change to nameOf viewController
+        } else if (nameOf == "Hi Scores") {
+            let viewControllerName = self.storyboard?.instantiateViewController(withIdentifier: "HighScores") as! hiScoresViewController
+            self.present(viewControllerName, animated: true, completion: nil) //change to nameOf viewController
+        } else if (nameOf == "Main Menu") {
+            let viewControllerName = self.storyboard?.instantiateViewController(withIdentifier: "MainMenu") as! homePageViewController
+            self.present(viewControllerName, animated: true, completion: nil) //change to nameOf viewController
+        } else {
+            let viewControllerName = self.storyboard?.instantiateViewController(withIdentifier: "MainMenu") as! homePageViewController
+            self.present(viewControllerName, animated: true, completion: nil) //change to nameOf viewController
         }
     }
 }
