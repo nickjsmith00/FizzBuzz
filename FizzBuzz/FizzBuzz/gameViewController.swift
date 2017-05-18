@@ -122,6 +122,7 @@ class gameViewController: UIViewController {
         amountOfLifes -= 1
         if (amountOfLifes <= 0) {
             stopTimer() //ends timer so timer is not continuing in another viewController
+            Global.updateHighScores(Global.currentScore)
             let gameOverAlert = UIAlertController(title: "Lost All Lives", message: "Game Over!", preferredStyle: .alert)
             let playAgainAction = UIAlertAction(title: "Play Again", style: .default) {
                 (action) -> Void in print("") //print("playing same game type")

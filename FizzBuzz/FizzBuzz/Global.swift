@@ -17,6 +17,8 @@ class Global: NSObject {
     public static var timerSpeed:Double = 0.0
     public static var insaneCounter:Bool = false
     public static var difficulty:String = ""
+    //highscores
+    public static var highScores:[Int] = [0,0,0,0,0]
     //other
     public static func defaultSettings() -> Void {
         fizzNumber = 3 //default fizz from wikipedia
@@ -25,5 +27,34 @@ class Global: NSObject {
         timerSpeed = 2.0 //default timerSpeed for medium
         insaneCounter = false //only on insane difficulty to add more challenge (currently on medium difficulty)
         difficulty = "medium" //default difficulty
+    }
+    public static func updateHighScores(_ scoreValue:Int) -> Void {
+        for i in 0...(5-1) { //5 highscores
+            if (highScores[i] < scoreValue) {
+                shiftHighScores(i)
+                highScores[i] = scoreValue
+                break //exit for loop
+            }
+        }
+    }
+    private static func shiftHighScores(_ position:Int) -> Void {
+        if (position == 1-1) {
+            highScores[5-1] = highScores[5-2]
+            highScores[5-2] = highScores[5-3]
+            highScores[5-3] = highScores[5-4]
+            highScores[5-4] = highScores[5-5]
+        }
+        if (position == 2-1) {
+            highScores[5-1] = highScores[5-2]
+            highScores[5-2] = highScores[5-3]
+            highScores[5-3] = highScores[5-4]
+        }
+        if (position == 3-1) {
+            highScores[5-1] = highScores[5-2]
+            highScores[5-2] = highScores[5-3]
+        }
+        if (position == 4-1) {
+            highScores[5-1] = highScores[5-2]
+        }
     }
 }

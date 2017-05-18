@@ -9,10 +9,13 @@
 //
 import UIKit
 class hiScoresViewController: UIViewController {
+    @IBOutlet var highScoreTextFields: [UITextField]!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        for i in 0...(5-1) {
+            highScoreTextFields[i].text = "Hi Score: \(Global.highScores[i])"
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

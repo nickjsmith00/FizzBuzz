@@ -190,27 +190,23 @@ lives.
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="display" translatesAutoresizingMaskIntoConstraints="NO" id="gEI-Vo-eP6">
-                                <rect key="frame" x="35" y="159" width="75" height="75"/>
+                                <rect key="frame" x="35" y="149" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="display" translatesAutoresizingMaskIntoConstraints="NO" id="yRx-wY-RCD">
-                                <rect key="frame" x="35" y="323" width="75" height="75"/>
+                                <rect key="frame" x="35" y="313" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="display" translatesAutoresizingMaskIntoConstraints="NO" id="s74-IZ-sJH">
-                                <rect key="frame" x="35" y="406" width="75" height="75"/>
+                                <rect key="frame" x="35" y="396" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="display" translatesAutoresizingMaskIntoConstraints="NO" id="NHS-Nq-RqO">
-                                <rect key="frame" x="35" y="489" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="display" translatesAutoresizingMaskIntoConstraints="NO" id="fn7-6a-4rJ">
-                                <rect key="frame" x="35" y="240" width="75" height="75"/>
+                                <rect key="frame" x="35" y="478" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hi Score:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d49-fj-igg">
-                                <rect key="frame" x="168" y="181" width="163" height="30"/>
+                                <rect key="frame" x="125" y="181" width="206" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -221,7 +217,7 @@ lives.
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hi Score:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lQF-M1-wXT">
-                                <rect key="frame" x="168" y="262" width="163" height="30"/>
+                                <rect key="frame" x="125" y="262" width="206" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -231,7 +227,7 @@ lives.
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hi Score:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4EA-HN-G9r">
-                                <rect key="frame" x="168" y="345" width="163" height="30"/>
+                                <rect key="frame" x="125" y="345" width="206" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -241,7 +237,7 @@ lives.
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hi Score:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aoF-rT-vLg">
-                                <rect key="frame" x="168" y="428" width="163" height="30"/>
+                                <rect key="frame" x="125" y="428" width="206" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -251,7 +247,7 @@ lives.
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hi Score:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K4o-Ea-zsF">
-                                <rect key="frame" x="168" y="511" width="163" height="30"/>
+                                <rect key="frame" x="125" y="511" width="206" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -260,12 +256,23 @@ lives.
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="display" translatesAutoresizingMaskIntoConstraints="NO" id="fn7-6a-4rJ">
+                                <rect key="frame" x="35" y="230" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.60784313725490191" green="0.97254901960784312" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" notEnabled="YES"/>
                         </accessibility>
                     </view>
+                    <connections>
+                        <outletCollection property="highScoreTextFields" destination="d49-fj-igg" collectionClass="NSMutableArray" id="4jL-KU-KQx"/>
+                        <outletCollection property="highScoreTextFields" destination="lQF-M1-wXT" collectionClass="NSMutableArray" id="52S-4k-Hxb"/>
+                        <outletCollection property="highScoreTextFields" destination="4EA-HN-G9r" collectionClass="NSMutableArray" id="Hf5-Qm-bkc"/>
+                        <outletCollection property="highScoreTextFields" destination="aoF-rT-vLg" collectionClass="NSMutableArray" id="IhF-Hn-nDa"/>
+                        <outletCollection property="highScoreTextFields" destination="K4o-Ea-zsF" collectionClass="NSMutableArray" id="541-Qe-S0K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2q1-kM-JfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -522,6 +529,6 @@ lives.
         <image name="stopButton" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NRf-Tb-NMY"/>
+        <segue reference="T79-RH-fxH"/>
     </inferredMetricsTieBreakers>
 </document>
