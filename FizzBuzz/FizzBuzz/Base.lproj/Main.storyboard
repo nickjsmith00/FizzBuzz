@@ -102,7 +102,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How To Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkg-gB-rua">
-                                <rect key="frame" x="32" y="58" width="311" height="68"/>
+                                <rect key="frame" x="32" y="32" width="311" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
                                 <color key="textColor" red="1" green="0.85886894479999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -114,10 +114,40 @@
                                 <rect key="frame" x="243" y="586" width="116" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instructions" translatesAutoresizingMaskIntoConstraints="NO" id="kc9-Wo-mut">
-                                <rect key="frame" x="32" y="142" width="311" height="436"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JTz-w0-cZm">
+                                <rect key="frame" x="32" y="103" width="311" height="475"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <mutableString key="text">1. Select your difficulty level.
+2. Select your ‘Fizz’ and ‘Buzz’
+numbers (e.g. 3 and 5).
+3. When the counter reaches a multiple
+of your ‘Fizz’ number (e.g. 3, 6, 9..) hit
+the ‘Fizz’ button. When the counter
+reaches a multiple of your ‘Buzz’
+number (e.g. 5, 10, 20..) hit the ‘Buzz’
+button. When the counter reaches a
+multiple of your ‘Buzz’ number
+(e.g. 15, 30, 45..) hit the ‘FizzBuzz’ button.
+
+* Pressing the correct button will give
+you points.
+* Not pressing anything only works when
+the counter is not divisible by the ‘Fizz’
+and ‘Buzz’ numbers.
+* Pressing the wrong button, or not
+pressing anything when the counter
+reaches a multiple of your ‘Fizz’ or
+‘Buzz’ numbers will result in the loss
+lives.
+* If you lose 3 lives it’s Game Over!</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.60784313725490191" green="0.97254901960784312" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -487,12 +517,11 @@
         <image name="fblogo" width="167" height="99"/>
         <image name="fizzBox" width="240" height="75"/>
         <image name="greenCircle" width="150" height="150"/>
-        <image name="instructions" width="313" height="425"/>
         <image name="redCircle" width="1000" height="1000"/>
         <image name="scoreBox" width="240" height="75"/>
         <image name="stopButton" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="T79-RH-fxH"/>
+        <segue reference="BkU-8m-3KI"/>
     </inferredMetricsTieBreakers>
 </document>
