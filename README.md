@@ -8,6 +8,9 @@ Made By NICK SMITH and STEPHEN BIRSA.
 -Github Management: Nick Smith & Stephen Birsa
 -Note Lead: Stephen Birsa
 
+Trello Collaboration:
+https://trello.com/b/7jP7E8W6/fizzbuzz
+
 FizzBuzz:
 FizzBuzz is based on a programmers’ interview on whether the programmer can actually “code”. A basic function checking divisible values.
 
