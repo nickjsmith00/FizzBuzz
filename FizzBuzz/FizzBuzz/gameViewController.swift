@@ -134,7 +134,7 @@ class gameViewController: UIViewController {
     }
     //adding Empty or FullLife UI element/s to screen
     private func addEmptyLife(_ position:Int) -> Void {
-        let currentPosition = CGRect(x: 20 + 30 * position, y: 21, width: 34, height: 34)
+        let currentPosition = CGRect(x: 22 + 30 * position, y: 23, width: 30, height: 30)
         lifes[position] = UIImageView(frame: currentPosition)
         lifes[position].image = UIImage(named: "emptyLife")
         self.view.addSubview(lifes[position])

@@ -29,4 +29,5 @@ This project was developed as a collaboration between Stephen Birsa & Nick Smith
 All source code of such game is available here.
 
 @All respective rights of files are subject to copyright under Australian Laws. All rights of files belong to their respective creators/owners of such files (Stephen Birsa & Nick Smith) as well as organisations relevant to such files (Deakin University).
+
 ~2017
