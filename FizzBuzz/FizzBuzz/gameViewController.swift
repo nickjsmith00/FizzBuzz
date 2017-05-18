@@ -1,56 +1,57 @@
 //
 //  gameViewController.swift
 //  FizzBuzz
+//  Gameplay of FizzBuzz
 //
 //  Created by NICHOLAS JOHN SMITH on 27/04/2017.
-//  Modified by STEPHEN BIRSA and NICHOLAS JOHN SMITH.
+//  Modified By NICHOLAS JOHN SMITH and STEPHEN BIRSA.
+//  Last Modified: 18/05/2017
 //  Copyright © 2017 Nicholas Smith. All rights reserved.
 //
 import UIKit
 class gameViewController: UIViewController {
     //logic
-    private var counter:Int = 1 //can start at 1 or the first divisible number of fizz/buzz
-    private var buttonPressed:Bool = false
     private var lifes:[UIImageView] = []
-    private var amountOfLifes = 3
+    private var counter:Int = 1 //can start at 1 or the first divisible number of fizz/buzz
+    private var amountOfLifes:Int = 3
     private var currentlyGotScore:Bool = false
+    private var buttonPressed:Bool = false
+    //textfields
+    @IBOutlet weak var counterTextField:UILabel!
+    @IBOutlet weak var FizzTextField:UILabel!
+    @IBOutlet weak var BuzzTextField:UILabel!
+    @IBOutlet weak var ScoreTextField:UILabel!
     //timer
     private var updateTimer:Timer!
-    //textfields
-    @IBOutlet weak var counterTextField: UILabel!
-    @IBOutlet weak var FizzTextField: UILabel!
-    @IBOutlet weak var BuzzTextField: UILabel!
-    @IBOutlet weak var ScoreTextField: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         counterTextField.adjustsFontSizeToFitWidth = true
         addLifesToScreen()
-        Global.currentScore = 0
         counterTextField.text = "\(counter)"
         FizzTextField.text = "\(Global.fizzNumber)"
         BuzzTextField.text = "\(Global.buzzNumber)"
         ScoreTextField.text = "Score: \(Global.currentScore)"
         startTimer()
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         // Dispose of any resources before disappearing
         stopTimer() //ends timer so timer is not continuing in another viewController
     }
-    private func startTimer() {
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    private func startTimer() -> Void {
         if updateTimer == nil {
             updateTimer = Timer.scheduledTimer(
                 timeInterval: Global.timerSpeed, target: self, selector: #selector(updateGame), userInfo: nil, repeats: true
             )
         }
     }
-    private func stopTimer() {
+    private func stopTimer() -> Void {
         if updateTimer != nil {
             updateTimer?.invalidate()
             updateTimer = nil
@@ -65,20 +66,20 @@ class gameViewController: UIViewController {
     @IBAction func BuzzButton(_ sender: UIButton) {
         handleButtons(type: "buzz")
     }
-    private func handleButtons(type: String) {
+    private func handleButtons(type: String) -> Void {
         buttonPressed = true
         if (fizzBuzzLogic() == type) {
             if (!currentlyGotScore && (type == "fizz" || type == "buzz")) {
-                Global.currentScore += 10
+                Global.currentScore = Global.currentScore + 10
                 currentlyGotScore = true
             }
             if (!currentlyGotScore && type == "fizzbuzz") {
-                Global.currentScore += 25
+                Global.currentScore = Global.currentScore + 25
                 currentlyGotScore = true
             }
-            uiTracking()
+            ScoreTextField.text = "Score: \(Global.currentScore)"
         } else {
-            uiTracking()
+            ScoreTextField.text = "Score: \(Global.currentScore)"
             failGame()
         }
     }
@@ -98,30 +99,40 @@ class gameViewController: UIViewController {
         //case right now is that when its nil, you do nothing and wait for next counter value
     }
     //main gameplay loop
-    internal func updateGame() {
-        counterUpdate()
+    internal func updateGame() -> Void {
+        updateCounter()
         buttonPressed = false
     }
-    private func counterUpdate() {
-        if !buttonPressed && fizzBuzzLogic() != "nil" {
+    private func updateCounter() -> Void {
+        if (!buttonPressed && fizzBuzzLogic() != "nil") {
             failGame() //fail if you press nothing when a button was required
         }
         //otherwise succeed if you didn't need to press anything or already pressed a successful button
-        if (!Global.insaneCounter) {counter += 1 }
-        else { counter += 1 + Int(arc4random_uniform(10)) }
+        if (!Global.insaneCounter) {
+            counter += 1
+        } else {
+            counter += 1 + Int(arc4random_uniform(10))
+        }
         currentlyGotScore = false
         counterTextField.text = "\(counter)"
     }
-    private func failGame() {
+    private func failGame() -> Void {
         lifes[amountOfLifes-1].removeFromSuperview()
         addEmptyLife(amountOfLifes-1)
         amountOfLifes -= 1
-        if (amountOfLifes <= 0) { self.dismiss(animated: true, completion: nil) } //takes you to previous page
-        //extension: send you to highscores page
+        if (amountOfLifes <= 0) {
+            stopTimer() //ends timer so timer is not continuing in another viewController
+            /*
+             On Main.storyboard:
+             Clicked on hiScoresViewController and went just below Custom Class, to Identity.
+             In Identity, added Storyboard ID as HighScores and ticked “Use Storyboard ID”
+             This enables to be able to go to that viewController through the code.
+            */
+            let changeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HighScores") as! hiScoresViewController
+            self.present(changeViewController, animated: true, completion: nil) //change to hiScoresViewController
+        }
     }
-    private func uiTracking() -> Void {
-        ScoreTextField.text = "Score: \(Global.currentScore)"
-    }
+    //adding Empty or FullLife UI element/s to screen
     private func addEmptyLife(_ position:Int) -> Void {
         let currentPosition = CGRect(x: 20 + 30 * position, y: 21, width: 34, height: 34)
         lifes[position] = UIImageView(frame: currentPosition)

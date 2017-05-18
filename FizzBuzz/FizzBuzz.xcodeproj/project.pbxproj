@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		018C9EC11EB0BA9700F9CFD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018C9EC01EB0BA9700F9CFD7 /* AppDelegate.swift */; };
-		018C9EC31EB0BA9700F9CFD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018C9EC21EB0BA9700F9CFD7 /* ViewController.swift */; };
 		018C9EC61EB0BA9700F9CFD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018C9EC41EB0BA9700F9CFD7 /* Main.storyboard */; };
 		018C9EC81EB0BA9700F9CFD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018C9EC71EB0BA9700F9CFD7 /* Assets.xcassets */; };
 		018C9ECB1EB0BA9700F9CFD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018C9EC91EB0BA9700F9CFD7 /* LaunchScreen.storyboard */; };
@@ -42,7 +41,6 @@
 /* Begin PBXFileReference section */
 		018C9EBD1EB0BA9700F9CFD7 /* FizzBuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FizzBuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018C9EC01EB0BA9700F9CFD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		018C9EC21EB0BA9700F9CFD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		018C9EC51EB0BA9700F9CFD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		018C9EC71EB0BA9700F9CFD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		018C9ECA1EB0BA9700F9CFD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				018C9EC01EB0BA9700F9CFD7 /* AppDelegate.swift */,
-				018C9EC21EB0BA9700F9CFD7 /* ViewController.swift */,
 				018C9EC41EB0BA9700F9CFD7 /* Main.storyboard */,
 				3CE536F21EB15BAF009263F2 /* hiScoresViewController.swift */,
 				3CE536F01EB15B97009263F2 /* howToPlayViewController.swift */,
@@ -280,7 +277,6 @@
 				BB1287D91EBAC962006E5D4E /* Global.swift in Sources */,
 				3CE536F31EB15BAF009263F2 /* hiScoresViewController.swift in Sources */,
 				3CE536EB1EB15B06009263F2 /* homePageViewController.swift in Sources */,
-				018C9EC31EB0BA9700F9CFD7 /* ViewController.swift in Sources */,
 				3CE536ED1EB15B51009263F2 /* gameSettingsViewController.swift in Sources */,
 				3CE536EF1EB15B74009263F2 /* gameViewController.swift in Sources */,
 				3CE536F11EB15B97009263F2 /* howToPlayViewController.swift in Sources */,

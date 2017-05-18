@@ -3,25 +3,21 @@
 //  FizzBuzz
 //
 //  Created by NICHOLAS JOHN SMITH on 27/04/2017.
+//  Modified By NICHOLAS JOHN SMITH and STEPHEN BIRSA.
+//  Last Modified: 18/05/2017
 //  Copyright © 2017 Nicholas Smith. All rights reserved.
 //
-
 import UIKit
-
 class hiScoresViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     /*
     // MARK: - Navigation
 
@@ -31,5 +27,4 @@ class hiScoresViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
